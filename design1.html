@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ClipZ | Ottawa Barbershop</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="design1.css"/>
+
+</head>
+<body>
+
+  <!-- ANIMATED BACKGROUND CANVAS -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- SPLASH SCREEN -->
+  <div id="splashScreen" class="splash-overlay">
+    <div class="splash-content">
+      <div class="splash-icon">✂</div>
+      <div class="splash-initials">Clip<span class="splash-accent">Z</span></div>
+      <div class="splash-title">Barbershop</div>
+      <div class="splash-loader">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="splash-skip" id="skipSplashBtn">⟳ ENTER</div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark px-4 site-nav fixed-top">
+    <a class="navbar-brand site-brand" href="index.html">
+      <span class="brand-name">Clip<span class="brand-accent">Z</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Hours & Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="nav-link nav-book" href="#booking">Book Now</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <p class="eyebrow">Ottawa's Premier Barbershop</p>
+          <h1 class="hero-name">GET SHARP.<br><span class="outline-text">STAY SHARP.</span></h1>
+          <p class="hero-desc">
+            ClipZ is a barbershop in the heart of Ottawa.
+            Clean fades, classic cuts, and straight razor shaves — 
+            all by appointment or walk-in.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#booking" class="btn btn-primary-custom">Book an Appointment</a>
+            <a href="#services" class="btn btn-secondary-custom">View Services</a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-flex justify-content-center">
+          <div class="hero-badge">
+            <div class="badge-inner">
+              <span class="badge-top">Est.</span>
+              <span class="badge-year">2020</span>
+              <span class="badge-bottom">Ottawa, ON</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <p class="section-eyebrow">What We Offer</p>
+      <h2 class="section-title">Our Services</h2>
+      <div class="row g-3">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon">✂️</div>
+            <h5>Classic Cut</h5>
+            <p>Scissor or clipper cut with a style consultation.</p>
+            <span class="service-price">$30</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card featured">
+            <div class="service-badge-label">Popular</div>
+            <div class="service-icon">💈</div>  
+            <h5>Fade</h5>
+            <p>Low, mid, or high fade — precision taper finish.</p>
+            <span class="service-price">$35</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon">🪒</div>
+            <h5>Straight Razor Shave</h5>
+            <p>Hot towel treatment with a traditional straight razor.</p>
+            <span class="service-price">$28</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="service-icon">🧔</div>
+            <h5>Cut + Beard</h5>
+            <p>Full haircut with beard trim and shape-up.</p>
+            <span class="service-price">$50</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="about-img-block">
+            <div class="about-stat-box">
+              <span class="stat-n">500+</span>
+              <span class="stat-l">Happy Clients</span>
+            </div>
+            <div class="about-stat-box">
+              <span class="stat-n">5★</span>
+              <span class="stat-l">Google Rating</span>
+            </div>
+            <div class="about-stat-box">
+              <span class="stat-n">6+</span>
+              <span class="stat-l">Years Open</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <p class="section-eyebrow">Our Story</p>
+          <h2 class="section-title">About ClipZ</h2>
+          <p class="about-text">
+            Founded in 2019, ClipZ started as a two-chair shop on Bank Street 
+            with a simple mission: deliver consistent, high-quality cuts in a 
+            comfortable, no-fuss environment.
+          </p>
+          <p class="about-text">
+            Our barbers bring years of experience and a passion for the craft. 
+            Whether you're coming in for a quick tidy-up or a full grooming session, 
+            you'll leave looking sharp.
+          </p>
+          <div class="about-tags">
+            <span class="a-tag">Walk-ins Welcome</span>
+            <span class="a-tag">Online Booking</span>
+            <span class="a-tag">All Hair Types</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="booking-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="section-eyebrow text-center">Get Started</p>
+          <h2 class="section-title text-center">Book an Appointment</h2>
+
+          <div class="step-indicator mb-5">
+            <div class="step active" id="step-dot-1"><span>1</span><small>Service</small></div>
+            <div class="step-line"></div>
+            <div class="step" id="step-dot-2"><span>2</span><small>Date & Time</small></div>
+            <div class="step-line"></div>
+            <div class="step" id="step-dot-3"><span>3</span><small>Confirm</small></div>
+          </div>
+
+          <div id="step-1" class="booking-step">
+            <h5 class="step-heading">Select a Service</h5>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <div class="book-option" data-service="Classic Cut - $30" onclick="selectService(this)">
+                  <strong>Classic Cut</strong>
+                  <span>$30  ·  ~30 min</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="book-option" data-service="Fade - $35" onclick="selectService(this)">
+                  <strong>Fade</strong>
+                  <span>$35  ·  ~40 min</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="book-option" data-service="Straight Razor Shave - $28" onclick="selectService(this)">
+                  <strong>Straight Razor Shave</strong>
+                  <span>$28  ·  ~25 min</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="book-option" data-service="Cut + Beard - $50" onclick="selectService(this)">
+                  <strong>Cut + Beard</strong>
+                  <span>$50  ·  ~55 min</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-primary-custom" onclick="goToStep(2)" id="btn-step-1" disabled>
+                Next: Pick a Time →
+              </button>
+            </div>
+          </div>
+
+          <div id="step-2" class="booking-step d-none">
+            <h5 class="step-heading">Choose a Date & Time</h5>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label class="form-label-custom">Date</label>
+                <input type="date" id="booking-date" class="form-input-custom" onchange="loadTimes()"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label-custom">Available Times</label>
+                <div id="time-slots" class="time-slot-grid">
+                  <p class="slot-placeholder">Select a date to see availability.</p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary-custom" onclick="goToStep(1)">← Back</button>
+              <button class="btn btn-primary-custom" onclick="goToStep(3)" id="btn-step-2" disabled>
+                Next: Confirm →
+              </button>
+            </div>
+          </div>
+
+          <div id="step-3" class="booking-step d-none">
+            <h5 class="step-heading">Your Name</h5>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <label class="form-label-custom">First Name</label>
+                <input type="text" id="fname" class="form-input-custom" placeholder="Marcus"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label-custom">Last Name</label>
+                <input type="text" id="lname" class="form-input-custom" placeholder="Johnson"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label-custom">Phone Number</label>
+                <input type="tel" id="phone" class="form-input-custom" placeholder="613-555-0000"/>
+              </div>
+            </div>
+            <div class="booking-summary mb-4">
+              <p class="summary-label">Booking Summary</p>
+              <div class="summary-row"><span>Service</span><strong id="summary-service">—</strong></div>
+              <div class="summary-row"><span>Date</span><strong id="summary-date">—</strong></div>
+              <div class="summary-row"><span>Time</span><strong id="summary-time">—</strong></div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-secondary-custom" onclick="goToStep(2)">← Back</button>
+              <button class="btn btn-primary-custom" onclick="confirmBooking()">Confirm Booking</button>
+            </div>
+          </div>
+
+          <div id="booking-confirmed" class="booking-confirmed d-none">
+            <div class="confirm-icon">✓</div>
+            <h4>You're all set!</h4>
+            <p id="confirm-msg"></p>
+            <button class="btn btn-secondary-custom mt-3" onclick="resetBooking()">Book Another</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-md-4">
+          <p class="section-eyebrow">Find Us</p>
+          <h3 class="contact-heading">Hours &<br>Location</h3>
+          <div class="hours-list">
+            <div class="hours-row"><span>Mon – Fri</span><span>9am – 7pm</span></div>
+            <div class="hours-row"><span>Saturday</span><span>9am – 5pm</span></div>
+            <div class="hours-row closed"><span>Sunday</span><span>Closed</span></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p class="section-eyebrow">Address</p>
+          <h3 class="contact-heading">Visit Us</h3>
+          <p class="contact-detail">123 Bank Street<br>Ottawa, ON K1P 5N2</p>
+          <p class="contact-detail">
+            <a href="tel:6135550123" class="contact-link">(613) 555-0123</a><br>
+            <a href="mailto:hello@clipz.ca" class="contact-link">hello@clipz.ca</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <p class="section-eyebrow">Walk-ins</p>
+          <h3 class="contact-heading">No Appointment?</h3>
+          <p class="contact-detail">
+            Walk-ins are always welcome, subject to barber availability.
+            We recommend booking online to guarantee your preferred time.
+          </p>
+          <a href="#booking" class="btn btn-primary-custom mt-2">Book Online</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (shorter version) -->
+  <footer class="site-footer">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+      <div>
+        <p class="footer-brand">Clip<span class="brand-accent">Z</span></p>
+        <p class="footer-sub">123 Bank Street · Ottawa, ON</p>
+      </div>
+      <p class="footer-designed">Designed by <a href="index.html" class="footer-link">Souhayl Hersi</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- External JavaScript -->
+  <script src="design1.js"></script>
+</body>
+</html>

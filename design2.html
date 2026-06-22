@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlipZ</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="design2.css"/>
+</head>
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <div id="splashScreen" class="overlay-screen visible">
+    <div class="splash-bg" aria-hidden="true">
+      <span class="float-shape shape-1"></span>
+      <span class="float-shape shape-2"></span>
+      <span class="float-shape shape-3"></span>
+      <span class="float-shape shape-4"></span>
+      <span class="float-shape shape-5"></span>
+    </div>
+    <div class="splash-inner">
+      <div class="splash-icon">🧠</div>
+      <h1 class="splash-title" aria-label="FlipZ">
+        <span class="letter">F</span><span class="letter">l</span><span class="letter">i</span><span class="letter">p</span><span class="letter accent">Z</span>
+      </h1>
+      <p class="splash-tagline">
+        A quick memory challenge. Match every pair before time runs out.
+      </p>
+      <button class="btn-primary-custom" id="startBtn">Start</button>
+    </div>
+  </div>
+
+  <!-- SETUP SCREEN -->
+  <div id="setupScreen" class="overlay-screen">
+    <div class="screen-bg" aria-hidden="true">
+      <span class="float-shape shape-a"></span>
+      <span class="float-shape shape-b"></span>
+      <span class="float-shape shape-c"></span>
+    </div>
+    <div class="setup-inner">
+      <p class="setup-eyebrow">Step 1</p>
+      <h2 class="setup-title">Choose a Level</h2>
+      <div class="option-row" id="levelOptions">
+        <div class="option-card" data-level="beginner">
+          <span class="option-label">Beginner</span>
+          <span class="option-detail">12 cards · 45s</span>
+        </div>
+        <div class="option-card" data-level="advanced">
+          <span class="option-label">Advanced</span>
+          <span class="option-detail">20 cards · 90s</span>
+        </div>
+      </div>
+
+      <p class="setup-eyebrow mt-4">Step 2</p>
+      <h2 class="setup-title">Choose a Theme</h2>
+      <div class="option-row" id="themeOptions">
+        <div class="option-card" data-theme="tools">
+          <span class="option-icon">✂️</span>
+          <span class="option-label">Tools</span>
+        </div>
+        <div class="option-card" data-theme="tech">
+          <span class="option-icon">💻</span>
+          <span class="option-label">Tech</span>
+        </div>
+        <div class="option-card" data-theme="space">
+          <span class="option-icon">🚀</span>
+          <span class="option-label">Space</span>
+        </div>
+      </div>
+
+      <button class="btn-primary-custom mt-4" id="playBtn" disabled>Play</button>
+    </div>
+  </div>
+
+  <!-- LEAVE CONFIRMATION MODAL -->
+  <div id="confirmModal" class="confirm-overlay">
+    <div class="confirm-box">
+      <p class="confirm-text">Are you sure you want to leave?</p>
+      <div class="confirm-actions">
+        <button class="btn-outline-custom" id="confirmStayBtn">Stay</button>
+        <button class="btn-primary-custom" id="confirmLeaveBtn">Leave</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="gameScreen" class="game-screen">
+    <div class="screen-bg subtle" aria-hidden="true">
+      <span class="float-shape shape-a"></span>
+      <span class="float-shape shape-b"></span>
+    </div>
+    <div class="game-topbar">
+      <div class="game-topbar-links">
+        <a href="#" class="game-back" id="gameBackBtn">Back</a>
+        <a href="index.html" class="game-back">Portfolio</a>
+      </div>
+      <div class="game-stats">
+        <div class="stat-pill">
+          <span class="stat-label">Time</span>
+          <span class="stat-value" id="timeDisplay">--</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-label">Moves</span>
+          <span class="stat-value" id="movesDisplay">0</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-label">Misses</span>
+          <span class="stat-value" id="missesDisplay">0</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-label">Pairs</span>
+          <span class="stat-value" id="pairsDisplay">0/0</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-grid" id="cardGrid"></div>
+  </div>
+
+  <!-- VICTORY SCREEN -->
+  <div id="victoryScreen" class="overlay-screen">
+    <div class="confetti-layer" id="confettiLayer"></div>
+    <div class="result-inner">
+      <div class="result-icon win">
+        <svg viewBox="0 0 52 52" class="checkmark-svg">
+          <circle class="checkmark-circle" cx="26" cy="26" r="23" fill="none"/>
+          <path class="checkmark-check" fill="none" d="M14 27l7 7 16-16"/>
+        </svg>
+      </div>
+      <h2 class="result-title">You Matched Them All!</h2>
+      <p class="result-stats" id="victoryStats"></p>
+      <button class="btn-primary-custom" id="playAgainWinBtn">Play Again</button>
+    </div>
+  </div>
+
+  <!-- GAME OVER SCREEN -->
+  <div id="gameOverScreen" class="overlay-screen">
+    <div class="result-inner">
+      <div class="result-icon lose">↻</div>
+      <h2 class="result-title">Time's Up</h2>
+      <p class="result-stats" id="gameOverStats"></p>
+      <button class="btn-primary-custom" id="playAgainLoseBtn">Try Again</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Game logic -->
+  <script src="design2.js"></script>
+
+</body>
+</html>

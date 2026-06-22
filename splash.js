@@ -1,4 +1,4 @@
-// splash.js – controls the splash screen appearance and dismissal
+// splash.js controls the splash screen appearance and dismissal
 (function() {
   const splash = document.getElementById('splashScreen');
   const skipBtn = document.getElementById('skipSplashBtn');
@@ -30,7 +30,7 @@
     });
   }
 
-  // Click anywhere on splash to dismiss
+  // clck to dismiss
   if (splash) {
     splash.addEventListener('click', function() {
       clearTimeout(autoTimer);
@@ -46,7 +46,7 @@
     }
   });
 
-  // Ultimate fallback: remove splash after 4 seconds if something goes wrong
+  // remove splash after 4 seconds if something goes wrong
   setTimeout(() => {
     if (splash && splash.parentNode) dismissSplash();
   }, 4000);

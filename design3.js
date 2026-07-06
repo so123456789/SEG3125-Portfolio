@@ -28,20 +28,20 @@ const CATEGORIES = ["Tops","Bottoms","Outerwear","Footwear","Accessories"];
 
 /* ============ DATA ============ */
 const PRODUCTS = [
-  {id:1,  name:"Linen Buttondown",    category:"Tops",        price:48,  rating:4.6, emoji:"👕", tag:"Featured", sizes:["XS","S","M","L","XL"]},
-  {id:2,  name:"Ribbed Tank",         category:"Tops",        price:24,  rating:4.3, emoji:"🎽", tag:"New",      sizes:["XS","S","M","L"]},
+  {id:1,  name:"T-Shirt",    category:"Tops",        price:48,  rating:4.6, emoji:"👕", tag:"Featured", sizes:["XS","S","M","L","XL"]},
+  {id:2,  name:"Tank Top",         category:"Tops",        price:24,  rating:4.3, emoji:"🎽", tag:"New",      sizes:["XS","S","M","L"]},
   {id:3,  name:"Silk Blouse",         category:"Tops",        price:68,  rating:4.8, emoji:"👚", tag:"Popular",  sizes:["S","M","L","XL"]},
   {id:4,  name:"Wide-Leg Trousers",   category:"Bottoms",     price:58,  rating:4.5, emoji:"👖", tag:"Featured", sizes:["XS","S","M","L","XL"]},
-  {id:5,  name:"Denim Shorts",        category:"Bottoms",     price:36,  rating:4.1, emoji:"🩳", tag:"New",      sizes:["S","M","L"]},
-  {id:6,  name:"Pleated Skirt",       category:"Bottoms",     price:52,  rating:4.7, emoji:"👗", tag:"Popular",  sizes:["XS","S","M","L"]},
+  {id:5,  name:"Fitness Shorts",        category:"Bottoms",     price:36,  rating:4.1, emoji:"🩳", tag:"New",      sizes:["S","M","L"]},
+  {id:6,  name:"Dress",       category:"Bottoms",     price:52,  rating:4.7, emoji:"👗", tag:"Popular",  sizes:["XS","S","M","L"]},
   {id:7,  name:"Quilted Jacket",      category:"Outerwear",   price:92,  rating:4.6, emoji:"🧥", tag:"New",      sizes:["S","M","L","XL"]},
   {id:8,  name:"Wool Trench Coat",    category:"Outerwear",   price:120, rating:4.9, emoji:"🥼", tag:"Featured", sizes:["XS","S","M","L","XL"]},
-  {id:9,  name:"Cropped Cardigan",    category:"Outerwear",   price:64,  rating:4.4, emoji:"🧶", tag:"Sale",     sizes:["S","M","L"]},
-  {id:10, name:"Canvas Sneakers",     category:"Footwear",    price:54,  rating:4.5, emoji:"👟", tag:"Popular",  sizes:["XS","S","M","L","XL"]},
+  {id:9,  name:"Cardigan",    category:"Outerwear",   price:64,  rating:4.4, emoji:"🧶", tag:"Sale",     sizes:["S","M","L"]},
+  {id:10, name:"Running Sneakers",     category:"Footwear",    price:54,  rating:4.5, emoji:"👟", tag:"Popular",  sizes:["XS","S","M","L","XL"]},
   {id:11, name:"Leather Sandals",     category:"Footwear",    price:46,  rating:4.2, emoji:"👡", tag:"Sale",     sizes:["S","M","L","XL"]},
-  {id:12, name:"Ankle Boots",         category:"Footwear",    price:88,  rating:4.7, emoji:"🥾", tag:"Featured", sizes:["XS","S","M","L","XL"]},
+  {id:12, name:"Winter Boots",         category:"Footwear",    price:88,  rating:4.7, emoji:"🥾", tag:"Featured", sizes:["XS","S","M","L","XL"]},
   {id:13, name:"Straw Tote",          category:"Accessories", price:38,  rating:4.4, emoji:"👜", tag:"New",      sizes:["One size"]},
-  {id:14, name:"Gold Hoop Earrings",  category:"Accessories", price:22,  rating:4.6, emoji:"💎", tag:"Popular",  sizes:["One size"]},
+  {id:14, name:"Diamond Earrings",  category:"Accessories", price:22,  rating:4.6, emoji:"💎", tag:"Popular",  sizes:["One size"]},
   {id:15, name:"Silk Scarf",          category:"Accessories", price:28,  rating:4.3, emoji:"🧣", tag:"Sale",     sizes:["One size"]},
 ];
 

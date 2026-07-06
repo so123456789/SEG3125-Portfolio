@@ -1,5 +1,5 @@
 // design2.js – FlipZ Memory Game
-// Vanilla JS. Icons are Unicode emoji (no image assets needed).
+// Icons are Unicode emoji (no images will take too long).
 // Sound effects loaded from local /audio files.
 
 /* ========== AUDIO ========== */
@@ -90,7 +90,7 @@ function checkReady() {
   document.getElementById('playBtn').disabled = !(state.level && state.theme);
 }
 
-/* ========== DECK BUILDING ========== */
+/* ======= DECK BUILDING ========== */
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -105,7 +105,7 @@ function buildDeck() {
   return shuffle([...iconSet, ...iconSet]).map((icon, i) => ({ id: i, icon }));
 }
 
-/* ========== RENDER GRID ========== */
+/* ======= GRID ========== */
 function renderGrid() {
   const grid = document.getElementById('cardGrid');
   grid.innerHTML = '';
@@ -158,7 +158,7 @@ function startGame() {
   }, 1000);
 }
 
-/* ========== CARD FLIP LOGIC ========== */
+/* ========== CARD FLIP ========== */
 function flipCard(cardEl) {
   if (state.busy) return;
   if (cardEl.classList.contains('flipped') || cardEl.classList.contains('matched')) return;
@@ -208,7 +208,7 @@ function checkMatch() {
   }
 }
 
-/* ========== CONFETTI (victory only) ========== */
+/* ========== CONFETTI FOR WIN ========== */
 function spawnConfetti() {
   const layer = document.getElementById('confettiLayer');
   layer.innerHTML = '';

@@ -1,7 +1,7 @@
 // design1.js – ClipZ Barbershop
 // Full‑screen animated background (more visible) + booking + splash
 
-/* ========== FULL‑SCREEN CANVAS ANIMATION (higher visibility) ========== */
+/* === FULL‑SCREEN CANVAS ANIMATION  ======= */
 (function() {
   const canvas = document.getElementById('bg-canvas');
   const ctx = canvas.getContext('2d');
@@ -16,7 +16,7 @@
 
   function createObject() {
     const type = TYPES[Math.floor(Math.random() * TYPES.length)];
-    // More visible: alpha between 0.12 and 0.35 (was 0.02–0.09)
+    // More visible was 0.02–0.09
     const alpha = random(0.12, 0.35);
     // Larger size range
     const size = type === 'dot' ? random(3, 8) : random(14, 32);
@@ -36,7 +36,7 @@
   function resizeCanvas() {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
-    // More objects: 120 instead of 80
+    // More objects 120 instead of 80
     objects = [];
     for (let i = 0; i < 120; i++) {
       objects.push(createObject());
@@ -139,7 +139,7 @@
   draw();
 })();
 
-/* ========== SPLASH SCREEN (unchanged) ========== */
+/* ========== SPLASH SCREEN ======== */
 (function() {
   const splash = document.getElementById('splashScreen');
   const skipBtn = document.getElementById('skipSplashBtn');
@@ -185,7 +185,7 @@
   }, 4000);
 })();
 
-/* ========== BOOKING LOGIC (unchanged) ========== */
+/* ===== BOOKING LOGIC ====== */
 let selectedService = null;
 let selectedTime = null;
 

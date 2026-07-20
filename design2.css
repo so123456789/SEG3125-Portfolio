@@ -1,6 +1,4 @@
-/* ══════════════════════
-   VARIABLES — Cream & Green
-══════════════════════ */
+
 :root {
   --cream:       #F7F1E3;
   --cream-2:     #EFE7D2;
@@ -98,7 +96,7 @@ body.has-custom-cursor * {
 .overlay-screen.visible { display: flex; }
 
 /* ══════════════════════
-   SPLASH — floating shapes + reveal
+   SPLASH floating shapes + reveal
 ══════════════════════ */
 .splash-bg {
   position: absolute;
@@ -272,7 +270,7 @@ body.has-custom-cursor * {
 .option-detail { font-size: 0.72rem; color: var(--ink-muted); }
 
 /* ══════════════════════
-   LEAVE CONFIRMATION MODAL
+   LEAVE CONFIRMATION 
 ══════════════════════ */
 .confirm-overlay {
   position: fixed;
@@ -424,7 +422,7 @@ body.has-custom-cursor * {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Once the entrance animation finishes, lock in the visible state explicitly —
+/* Once the entrance animation finishes, lock in the visible state explicitly 
    simply cancelling the animation would revert to the base opacity:0 above */
 .memory-card.settled {
   opacity: 1;
